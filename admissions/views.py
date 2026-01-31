@@ -23,6 +23,8 @@ def success(request):
 # PDF / Print view
 def admission_pdf(request, pk):
     admission = get_object_or_404(Admission, pk=pk)
-    return render(request, 'admissions/admission_pdf.html', {
+    return render(request, 'admissions/admission_pdf.html', 
+    return render_to_pdf("admissions/pdf.html", context)
+{
         'admission': admission
     })
