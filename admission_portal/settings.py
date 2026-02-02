@@ -25,9 +25,13 @@ SECRET_KEY = 'django-insecure-l&o#kyhmh0mqpoi^-@@0*uc=#$ykyy^b+qyosnu79_vz^*%jrc
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    'admission-portal-0vd5.onrender.com',
+    'localhost',
+    '127.0.0.1'
+]
 CSRF_TRUSTED_ORIGINS = [
-    "https://*.onrender.com",
+    'https://admission-portal-0vd5.onrender.com'
 ]
 
 # Application definition
@@ -45,14 +49,11 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',  # ← MUST
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
 ]
 
 ROOT_URLCONF = 'admission_portal.urls'
