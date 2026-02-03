@@ -1,62 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Form Submitted Successfully</title>
+    <title>Form Submitted</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f6f8;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
+        body{
+            font-family:Arial;
+            background:#eef1ff;
+            text-align:center;
+            padding-top:80px;
         }
-
-        .box {
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            width: 90%;
-            max-width: 400px;
+        .box{
+            background:white;
+            width:50%;
+            margin:auto;
+            padding:30px;
+            border-radius:10px;
         }
-
-        h1 {
-            color: #2e7d32;
-            margin-bottom: 10px;
-        }
-
-        p {
-            font-size: 16px;
-            color: #555;
-        }
-
-        a {
-            display: inline-block;
-            margin-top: 20px;
-            text-decoration: none;
-            background: #1976d2;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-        }
-
-        a:hover {
-            background: #0d47a1;
+        a{
+            display:inline-block;
+            margin-top:20px;
+            padding:12px 25px;
+            background:#3949ab;
+            color:white;
+            text-decoration:none;
         }
     </style>
 </head>
 <body>
 
 <div class="box">
-    <h1>✅ Form Submitted Successfully</h1>
-    <p>Your admission form has been submitted.</p>
-    <p>Our team will contact you soon.</p>
+    <h2>✅ Admission Form Submitted Successfully</h2>
+    <p>Thank you for submitting the admission form.</p>
 
-    <a href="{% url 'admission_form' %}">Submit Another Form</a>
+    <a href="{% url 'admission_pdf' admission.pk %}">
+        Download / View PDF
+    </a>
 </div>
 
 </body>
