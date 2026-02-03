@@ -57,7 +57,8 @@ button{
 <h2>Computer Classes Admission Form</h2>
 
 <form method="POST" enctype="multipart/form-data">
-{% csrf_token %}
+  {% csrf_token %}
+     {{ form.as_p }}
 
 <h3>1. Student Details</h3>
 <div class="row">
