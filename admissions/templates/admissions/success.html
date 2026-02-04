@@ -1,41 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Form Submitted</title>
-    <style>
-        body{
-            font-family:Arial;
-            background:#eef1ff;
-            text-align:center;
-            padding-top:80px;
-        }
-        .box{
-            background:white;
-            width:50%;
-            margin:auto;
-            padding:30px;
-            border-radius:10px;
-        }
-        a{
-            display:inline-block;
-            margin-top:20px;
-            padding:12px 25px;
-            background:#3949ab;
-            color:white;
-            text-decoration:none;
-        }
-    </style>
+    <title>Admission Submitted</title>
 </head>
 <body>
-
-<div class="box">
     <h2>✅ Admission Form Submitted Successfully</h2>
-    <p>Thank you for submitting the admission form.</p>
+
+    <p>Thank you for submitting the form.</p>
 
     <a href="{% url 'admission_pdf' admission.pk %}">
-        Download / View PDF
+        View / Download PDF
     </a>
-</div>
-
 </body>
 </html>
