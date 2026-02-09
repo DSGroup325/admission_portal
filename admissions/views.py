@@ -21,4 +21,6 @@ def success(request, pk):
 
 def admission_pdf(request, pk):
     admission = get_object_or_404(Admission, pk=pk)
-    return render(request, 'admissions/pdf.html', {'admission': admission})
+    return render(request, 'admissions/pdf.html', {
+        'admission': admission
+    })
