@@ -51,8 +51,14 @@
 <div class="container">
     <h2>Computer Classes Admission Form</h2>
 
-    <form method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
+    <<form method="POST" enctype="multipart/form-data" action="">
+    {% csrf_token %}
+
+    {% if form.errors %}
+        <div style="color:red; margin-bottom:15px;">
+            {{ form.errors }}
+        </div>
+    {% endif %}
 
         <!-- 1. Student Details -->
         <div class="section-title">1. Student Details</div>
