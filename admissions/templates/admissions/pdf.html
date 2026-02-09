@@ -131,23 +131,64 @@
     <table>
         <tr>
             <td class="label">Student Photo</td>
-            <td>{{ admission.student_photo }}</td>
+            <td>
+            {% if admission.student_photo %}
+	    <a href="{{ admission.student_photo.url }}">
+            View Student Photo
+            </a>
+            {% else %}
+            Not Uploaded
+            {% endif %}
+            </td>
         </tr>
         <tr>
             <td class="label">Student Aadhaar</td>
-            <td>{{ admission.student_aadhaar }}</td>
+            <td>
+            {% if admission.student_aadhaar %}
+            <a href="{{ admission.student_aadhaar.url }}">
+            View Student Aadhaar
+            </a>
+            {% else %}
+            Not Uploaded
+            {% endif %}
+            </td>
         </tr>
         <tr>
             <td class="label">Parent Aadhaar</td>
-            <td>{{ admission.parent_aadhaar }}</td>
+            <td>
+            {% if admission.parent_aadhaar %}
+            <a href="{{ admission.parent_aadhaar.url }}">
+            View Parent Aadhaar
+            </a>
+            {% else %}
+            Not Uploaded
+            {% endif %}
+            </td>
+
         </tr>
         <tr>
             <td class="label">Student Signature</td>
-            <td>{{ admission.student_signature }}</td>
+            <td>
+            {% if admission.student_signature %}
+            <a href="{{ admission.student_signature.url }}">
+            View Student Signature
+            </a>
+            {% else %}
+            Not Uploaded
+            {% endif %}
+            </td>
         </tr>
         <tr>
             <td class="label">Parent Signature</td>
-            <td>{{ admission.parent_signature }}</td>
+            <td>
+            {% if admission.parent_signature %}
+            <a href="{{ admission.parent_signature.url }}">
+            View Parent Signature
+            </a>
+            {% else %}
+            Not Uploaded
+            {% endif %}
+            </td>
         </tr>
     </table>
 </div>
