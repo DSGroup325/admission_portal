@@ -8,6 +8,5 @@ urlpatterns = [
     path('', include('admissions.urls')),
 ]
 
-# Media files (images, documents) serve karne ke liye
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# Media files serve karne ke liye
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
